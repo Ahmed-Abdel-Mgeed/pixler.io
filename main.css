@@ -1,0 +1,112 @@
+/* Global styles */
+* {
+    font-family: Merienda One;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-image: url(dark-mosaic.png);
+}
+
+/* Main heading style */
+h1  {
+    font-family: Monoton;
+    font-size: 5.9em;
+    margin: 0;
+    text-transform: capitalize;
+    background: #2196f3;
+    background-image: url(dark-mosaic.png);
+}
+
+/* divs that containnig the groups */
+div {
+	width: 50%;
+	padding: 1em;
+}
+
+/* labels for the input feilds */
+label {
+	display: block;
+}
+
+/* div who containing the input type number */
+.num-group {
+	background: linear-gradient(to bottom, #3888c7,#c35252,#c1c113,#ffbc00,#5283a9,#fbff00,#ff0000);
+}
+
+/* div who containing the input type color */
+.color {
+	background: linear-gradient(to bottom, #ef2626,orange,yellow,#40d024,#5c5cca,#b465f1,#ce6fce);
+}
+
+h2 {
+	margin: 0;
+	padding: 1em;
+}
+
+/* input feilds type number styles */
+input[type=number] {
+	outline: none;
+	border: 1px solid #ccc;
+	font-size: 1em;
+	background: transparent;
+}
+
+/* submit button styles */
+.btn {
+    padding: 30px;
+    border: none;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto ;
+    color: white;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #092148 0%, #5bb981 51%, #0f5ee1 100%);
+}
+
+/* submit button hover style */
+.btn:hover {
+  background-position: right center;
+}
+
+/* div who containing the table */
+.grid {
+    position: absolute;
+	top: 9.4em;
+    right: 0;
+}
+
+/* list of instractions styles */
+ol {
+	margin: 0;
+	background: #ffff00ad;
+	padding: 1em 2em;
+	text-transform: capitalize;
+}
+
+/* table elements styles */
+table,
+tr,
+td  {
+    border: 1px solid #0000004d;
+    background: #ffffff5c
+}
+
+table  {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr  {
+    height: 20px;
+}
+
+td  {
+    width: 20px;
+}
