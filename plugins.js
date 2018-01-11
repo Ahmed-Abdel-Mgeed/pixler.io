@@ -2,15 +2,23 @@
 $(document).ready(function () {
  	// Get the form &  the submit button.
     const myForm = $("#myForm"),
-    	btn    = myForm.children().last(),
-    	grid = $("#grid"); // get the table.
+    	btn    = myForm.children().last().children(),
+    	grid   = $("#grid"); // get the table.
+
+
+
 
     // listening to the submit button.
+    
     btn.click(function (evt) {
         evt.preventDefault(); 	// stop the page from reload.
 
         mackGrid();				// call the makeGrid function.
+        Actions();
     });
+
+
+
 
     // Creat a makeGrid function.
     function mackGrid() {
@@ -35,9 +43,24 @@ $(document).ready(function () {
 	/*	set an event listner to the user actions with the canvas.
 		TO DO: on click color = the user color & on dbl click delete the color */
 	grid.on("click dblclick", "td", function (event) {
-		// Get the color from color picker.
-		let color = $("#colorPicker").val();
+		// Get the color from color paicker.
+		let color = $("#colorPaicker").val();
 
-		event.type == "click" ? $(this).css("background", color) : $(this).css("background", "none");
+		event.type == "click" ? $(this).css("background", color) : $(this).css("background", "#ffffff5c");
 	});
+
+    let x = 0;
+
+  function Actions() {
+    $( ".num-group" ).toggle( "slide" );
+    $( ".color" ).toggle( "slide", { direction: "right" });
+    
+    x += 1;
+    if (x % 2 == 0){
+      btn.text("Let's Drawing");
+    }
+    else if (x % 2 != 0){
+      btn.text("Start Over");
+    }
+  };
 });

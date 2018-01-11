@@ -1,55 +1,70 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <title>Pixler</title>
-            <!-- Fonts -->
-            <link href="https://fonts.googleapis.com/css?family=Merienda+One|Monoton" rel="stylesheet">
-            <!-- styles -->
-            <link rel="stylesheet" href="main.css">
-            
-        </head>
-        <body>
-            <!-- Header -->
-            <header>
-                <h1>pixel art maker</h1>
-            </header>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Pixler</title>
+      <!-- Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Merienda+One|Monoton" rel="stylesheet">
+      <!-- styles -->
+      <link rel="stylesheet" href="main.css">   
+    </head>
+    <body>
+      <!-- Header -->
+      <header>
+        <h1>pixel art maker</h1>
+      </header>
 
-            <!-- Form-->
-            <form class="form" id="myForm">
-                <!-- Fields for hieght and width -->
-                <div class="num-group">
-                    <h2>Choose Canvas Size</h2>
+      <div class="content">
+        <!-- Form-->
+        <form class="form" id="myForm">
+          <div class="container">
+          <!-- Fields for hieght and width -->
+          <div class="num-group">
 
-                    <label for="gridHeight">Grid Height</label>
-                    <input type="number" id="gridHeight" name="height" min="1" max="100" value="1">
+              <h2>Choose Canvas Size</h2>
 
-                    <label for="gridWidth">Grid Hidth</label>
-                    <input type="number" id="gridWidth" name="width" min="1" max="100" value="1">
-                </div>
-                <!-- Color Picker -->
-                <div class="color">
-                    <h2><label>Choose a Color</label></h2>
-                    <input type="color" id="colorPicker" name="color" value="#ff0000">
-                </div>
-                <!-- Submit Button -->
-                <div>
-                    <input type="submit" class="btn" value="Let's Drawing">
-                </div>
-            </form>
-            <!-- Grid -->
-            <div class="grid">
-                <ol>
-                    <li>click for fill the cell by color</li>
-                    <li>double click for delete the color from the cell</li>
-                </ol>
-                <h2>Design Danvas</h2>
-                <table id="grid"></table>
-            </div>
+              <label for="gridHeight">Grid Height</label>
+              <input type="number" id="gridHeight" name="height" min="1" max="100" value="1">
 
-            <span>Made With Love By: Ahmed Abdel Mgeed &copy;</span>
-            <!-- Plugins -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="plugins.js"></script>
-        </body>
-    </html>
+              <label for="gridWidth">Grid Hidth</label>
+              <input type="number" id="gridWidth" name="width" min="1" max="100" value="1">
+
+          </div>
+
+          <!-- Color Picker -->
+          <div class="color">
+            <div class="rotat-fix">
+              <h2><label>Choose a Color</label></h2>
+              <input type="color" id="colorPaicker" name="color" value="#ff0000">
+            </div><!-- .rotat-fix -->
+          </div>
+          </div><!-- .container -->
+
+          <!-- Submit Button -->
+          <div class="button-group">
+            <button type="submit" class="btn">Let's Drawing</button>
+          </div>
+        </form>
+
+
+      </div><!-- .content -->
+      <!-- Grid -->
+      <div class="grid">
+        <!--<ol>
+          <li>click for fill the cell by color</li>
+          <li>double click for delete the color from the cell</li>
+        </ol>-->
+        <h2>Design canvas</h2>
+        <table id="grid"></table>
+      </div>
+      
+      <div class="footer">
+        <span>Made With Love By: Ahmed Abdel Mgeed &copy;</span>
+      </div>
+      <!-- Plugins -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <!--<script src="jquery-ui.min.js"></script>-->
+      <script src="plugins.js"></script>
+    </body>
+  </html>
