@@ -8,13 +8,12 @@
 
 
 
-/* Body styles */
+/* Page styles */
 body, html {
   background-image: linear-gradient(to right, #092148 0%, #5bb981 51%, #0f5ee1 100%);
   background-size: cover;
   height: 100%;
   text-align: center;
-  transition: 0.5s all linear;
   overflow-x: hidden;
 }
 
@@ -32,9 +31,9 @@ h1  {
 
 }
 
-
+/* Boxs styles */
 .num-group, .color {
-  padding: 100px 30px 100px 10px;
+  padding: 60px 30px 100px 10px;
   clip-path: polygon(100% 0, 86% 100%, 0 100%, 0 0);
   width: 50%;
   background: #0a2249;
@@ -57,11 +56,25 @@ h2{
 }
 
 
-/* input feilds type number styles */
+/* input feilds styles */
 input[type=number] {
-
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff17;
+  transition: 200ms all;
+  padding: 0 0 0 4px;
+}
+label{
+  padding: 1em;
 }
 
+input[type=number]:focus{
+  border-color: #fff;
+}
+#colorPaicker {
+  cursor: pointer;
+}
 
 /* submit button styles */
 .btn {
@@ -74,6 +87,7 @@ input[type=number] {
   background-size: 200% auto ;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
   background-image: linear-gradient(to right, #092148 0%, #5bb981 51%, #0f5ee1 100%);
 }
 
@@ -82,14 +96,25 @@ input[type=number] {
   background-position: right center;
 }
 
-/* table elements styles */
 
-.button-group,
-.grid h2,
-span {
-  padding: 0 4em 0 0;;
+
+
+/* table elements styles */
+.grid{
+  margin: 2em 0;
 }
 
+ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  color: brown;
+  font-size: 1em;
+  display: none;
+  padding: 1em;
+  list-style: none;
+}
 table,
 tr,
 td  {
@@ -108,4 +133,18 @@ tr  {
 
 td  {
   width: 20px;
+}
+
+/* Footer styles */
+.footer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/* Fixs */
+.button-group,
+.grid h2,
+span {
+  padding: 0 4em 0 0;
 }
