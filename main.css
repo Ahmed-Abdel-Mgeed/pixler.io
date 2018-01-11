@@ -108,12 +108,13 @@ ul{
   position: absolute;
   top: 0;
   left: 0;
-  background: #333;
-  color: brown;
+  background: #3333334f;
+  color: #a52a2a80;
   font-size: 1em;
   display: none;
   padding: 1em;
   list-style: none;
+  clip-path: polygon(100% 0, 86% 100%, 0 100%, 0 0);
 }
 table,
 tr,
